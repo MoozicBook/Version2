@@ -10,6 +10,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <style>
+/* CSS for Splash Screen */
 /* Sets position, size, and gif for SplashScreen */
 .loader {
     position: fixed;
@@ -20,7 +21,9 @@
     z-index: 9999;
     background: url("/images/SplashScreens/SplashScreen.gif") 50% 50% no-repeat rgb(0,0,0);
 }
+/* End CSS for Splash Screen */
 
+/* CSS for login modal */
 /* Full-width input fields */
 input[type=text], input[type=password] {
     width: 100%;
@@ -139,17 +142,19 @@ span.psw {
     .cancelbtn {
        width: 100%;
     }
+/*End CSS for login modal*/
 }
 </style>
 </head>
 
 <body>
+<!--div for navigation bar-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="https://www.moozicbook.com">
         <img src="images/logo.jpg" width="140" height="100" alt="">
     </a>
 
-<div class="collapse navbar-collapse" id="navbarNav" style="float: left">
+	<div class="collapse navbar-collapse" id="navbarNav" style="float: left">
         <a class="nav-item nav-link" href="#">Home</a>
         <a class="nav-item nav-link" href="#">Classifieds</a>
         <a class="nav-item nav-link" href="#">Discover</a>
@@ -168,9 +173,11 @@ span.psw {
             </div>
         </div>
 
+        <!--button for login modal-->
         <button style="width: auto;" onclick="document.getElementById('LoginForm').style.display='block'">Login</button>
 </nav>
 
+<!--div for login modal-->
 <div id="LoginForm" class="modal">
     <form class="modal-content animate" action="/action_page.php">
         <div class="imgcontainer">
@@ -198,6 +205,7 @@ span.psw {
     </form>
 </div>
 
+<!--Script for login modal-->
 <script>
     // Get the modal
     var modal = document.getElementById('LoginForm');
@@ -210,10 +218,11 @@ span.psw {
     }
 </script>
 
-<!--<div id="loadscreen" class="loader"></div> #Loads Splash Screen-->
+<!--<div id="loadscreen" class="loader"></div>-->
 
 <center><h1> This is a test </h1></center>
 
+<!--Script for spash screen-->
 <script type="text/javascript">
     $(window).load(function() {
         $(".loader").fadeOut(8000);
